@@ -45,6 +45,7 @@ Team members: Japher S., Furong T., Weiqiang H.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a difference in two reinforcement learning algorithm strategies. The SARSA agent seems to display a less efficient learning pattern comparing to the Q-learning agent.<br/> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The SARSA agent had a less stable increase on the way to the first completion of the driving course. It took him 2796 episodes to self-navigate to the finish line successfully.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The SARSA agent also took longer to fully learn the self-driving behavior (reaching the goal for 10 times in a row) after the first time reaching the goal. As can be calculated from Figure 4, After the first time the SARSA agent beat the game, he took another 672 episodes to be able to stably beat the game. In other words, only when he reached the 3468th episode, he was then able to fully learn the course and acquired the complete ability of self-navigating to the course goal. In comparison, the Q-learning agent took significantly fewer episodes to reach the same stable state.<br/>
+
 ![](https://github.com/JapherS/Self-Navigating-Agent/blob/master/learning_plots/Results.png)
 ***
 
