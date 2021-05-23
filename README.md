@@ -16,9 +16,9 @@ Team members: Japher Su, Furong Tian, Weiqiang Huang
 
 ## Implementation and Environment
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A racing car environment that is implemented by using Pygame (Pete, 2011) and OpenAI Gym (Brockman et al., 2016), which are popular Python libraries for coding video games and setting up the environment, were used as framework in the current project. The project was written in Python and structured into modularized file:
-  - Game.py: This class contains the main game and the logic of training the reinforcement learning agent. 
-  - QLearning.py and SARSA.py: These two classes represent the functions/components that make up a Q-learning agent and a SARSA agent (e.g., update the q-table and choose the next action based on the values from the q-table).	
-  - The folder gym_race.env contains all the environment-related files and the following information/functions:
+  - ***Game.py***: This class contains the main game and the logic of training the reinforcement learning agent. 
+  - ***QLearning.py*** and ***SARSA.py***: These two classes represent the functions/components that make up a Q-learning agent and a SARSA agent (e.g., update the q-table and choose the next action based on the values from the q-table).	
+  - The folder ***gym_race.env*** contains all the environment-related files and the following information/functions:
     - Many attributes that fully define a car’s state, such as angle, position, speed, and the status of whether the car has crashed on the side of the track.
     - Usage of PyGame library to create the game UI.
     - Utility functions such as between-points calculation and reward evaluation.
@@ -38,10 +38,10 @@ Team members: Japher Su, Furong Tian, Weiqiang Huang
 
 ## Result and Evaluation
 ### ***Q-Learning***
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As can be seen in Figure 1, with q-learning, our agent reached the goal for the first time in his 1536th training episode. By that point, the performance was steadily improving with small instability, which we expected to be normal. As long as the learning pattern was shown to be improving overtime, we consider the learning strategy to be effective and correct. At the point that the agent reached the goal for the first time, it started to be able to navigate. However, there was still a possibility that the agent’s behavior and success very still unstable and not maintainable. For this reason, a criterion was specified to define what it means as having learned how to navigate stably and successfully for an agent in the project. As mentioned in the Approach section, we used the condition of the agent consecutively reaching the goal for 10 times in a row as the indication of training completion. Figure 2 displays the time point of the agent being able to stably reach the goal and complete the training. It can be observed that when he reached the 1098th episode, he fully learned the track and acquired the complete ability of self-navigating to the course goal. It can also be deduced that after the first time the agent beat the game, it took him another 12 episodes to be able to stably beat the game.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With q-learning, our agent reached the goal for the first time in his 1536th training episode. By that point, the performance was steadily improving with small instability, which we expected to be normal. As long as the learning pattern was shown to be improving overtime, we consider the learning strategy to be effective and correct. At the point that the agent reached the goal for the first time, it started to be able to navigate. However, there was still a possibility that the agent’s behavior and success very still unstable and not maintainable. For this reason, a criterion was specified to define what it means as having learned how to navigate stably and successfully for an agent in the project. As mentioned in the Approach section, we used the condition of the agent consecutively reaching the goal for 10 times in a row as the indication of training completion. Figure 2 displays the time point of the agent being able to stably reach the goal and complete the training. It can be observed that when he reached the 1098th episode, he fully learned the track and acquired the complete ability of self-navigating to the course goal. It can also be deduced that after the first time the agent beat the game, it took him another 12 episodes to be able to stably beat the game.
 ### ***Q-Learning vs. SARSA Result Comparison*** 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a difference in two reinforcement learning algorithm strategies. As can be learned in Figure 3 and Figure 4, the SARSA agent seems to display a less efficient learning pattern comparing to the Q-learning agent.<br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As shown in Figure 3, the SARSA agent had a less stable increase on the way to the first completion of the driving course. It took him 2796 episodes to self-navigate to the finish line successfully.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is a difference in two reinforcement learning algorithm strategies. The SARSA agent seems to display a less efficient learning pattern comparing to the Q-learning agent.<br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The SARSA agent had a less stable increase on the way to the first completion of the driving course. It took him 2796 episodes to self-navigate to the finish line successfully.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The SARSA agent also took longer to fully learn the self-driving behavior (reaching the goal for 10 times in a row) after the first time reaching the goal. As can be calculated from Figure 4, After the first time the SARSA agent beat the game, he took another 672 episodes to be able to stably beat the game. In other words, only when he reached the 3468th episode, he was then able to fully learn the course and acquired the complete ability of self-navigating to the course goal. In comparison, the Q-learning agent took significantly fewer episodes to reach the same stable state.<br/>
 ***
 
@@ -52,6 +52,17 @@ Team members: Japher Su, Furong Tian, Weiqiang Huang
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There are two potential limitations in our current project. It is worth noting that the size and complexity of the track and possible actions of the car in the current project are small and low. In the case where the track size and complexity are significantly greater, there will be limitations on using Q-learning to solve the self-driving agent problem. Because Q-learning requires the usage of a q-table to store learning data, a bigger and more complex track (e.g., more complicated state and higher number of actions) will require a bigger q-table. This may cause a memory issue, which is one potential limitation in the current project. A bigger table also requires more time to be updated, which extends necessary learning time. This causes a time issue and is a second limitation. 
 ### ***Recommendation***
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To improve the learning efficiency of the agent, we suggest future effort to be focused on adopting a different algorithm that may produce better training efficiency and results. Algorithms such as deep Q-learning may be a good alternative to the self-driving car challenge as it addresses the aforementioned memory-related and time-related concerns. In addition, another suggestion for future direction is to find a better decay strategy for epsilon (and/or alpha) to improve the learning efficiency of the self-driving agent.
+***
+
+## References
+- Artificial Intelligence A-ZTM: Learn How to Build An AI. (2021). Udemy. https://www.udemy.com/course/artificial-intelligence-az/
+- Benefits of Self-Driving Vehicles. (2018, March 19). Coalition for Future Mobility. https://coalitionforfuturemobility.com/benefits-of-self-driving-vehicles/#:%7E:text=Automation%20can%20help%20reduce%20the,risky%20and%20dangerous%20driver%20behaviors.
+- Brockman, G., Cheung, V., Pettersson, L., Schneider, J., Schulman, J., Tang, J., & Zaremba, W. (2016). Openai gym. ArXiv Preprint ArXiv:1606.01540.
+- Matiisen, T. (2015, December 19). Demystifying Deep Reinforcement Learning | Computational Neuroscience Lab. Institute of Computer Science, University of Tartu. https://neuro.cs.ut.ee/demystifying-deep-reinforcement-learning/
+- Pete Shinners (2011). PyGame - Python Game Development. Retrieved from http://www.pygame.org
+- Russell, S. J., Norvig, P., & Davis, E. (2010). Artificial intelligence: a modern approach. 3rd ed. Upper Saddle River, NJ: Prentice Hall.
+- Salloum, Z. (2019, April 25). Exploration in Reinforcement Learning - Towards Data Science. Medium. https://towardsdatascience.com/exploration-in-reinforcement-learning-e59ec7eeaa75
+- Wikipedia contributors. (2021, April 5). Q-learning. Wikipedia. https://en.wikipedia.org/wiki/Q-learning#cite_note-auto-1
 
 
 
