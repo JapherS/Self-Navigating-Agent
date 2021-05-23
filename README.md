@@ -1,3 +1,5 @@
+![](https://github.com/JapherS/Self-Navigating-Agent/blob/master/learning_plots/Screenshot.png)
+
 # Self-Navigating Agent
 Team members: Japher S., Furong T., Weiqiang H.
 ***
@@ -64,6 +66,15 @@ Team members: Japher S., Furong T., Weiqiang H.
 - Russell, S. J., Norvig, P., & Davis, E. (2010). Artificial intelligence: a modern approach. 3rd ed. Upper Saddle River, NJ: Prentice Hall.
 - Salloum, Z. (2019, April 25). Exploration in Reinforcement Learning - Towards Data Science. Medium. https://towardsdatascience.com/exploration-in-reinforcement-learning-e59ec7eeaa75
 - Wikipedia contributors. (2021, April 5). Q-learning. Wikipedia. https://en.wikipedia.org/wiki/Q-learning#cite_note-auto-1
+***
+
+## Video Demo
+### ***Training in Progress***
+[![Overview](https://img.youtube.com/vi/i6uyzdYZbuo/0.jpg)](https://www.youtube.com/watch?v=i6uyzdYZbuo)
+### ***Training Completed***
+[![Overview](https://img.youtube.com/vi/zh1jAYCGkEg/0.jpg)](https://www.youtube.com/watch?v=zh1jAYCGkEg)
+
+
 
 
 
