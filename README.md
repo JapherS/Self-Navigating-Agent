@@ -13,7 +13,7 @@ Team members: Japher S., Furong T., Weiqiang H.
 
 ## Related Work
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ponteves and Eremenko’s educational project (2021) provides background information about AI and gives three example projects as a demonstration. One of their projects has a focus on self-navigating car. Their project was set out to train an agent to navigate around obstacles to reach a specified goal position from a starting position. The two positions could be set at any point on the map and the obstacles could also be freely drawn. Their self-driving car could learn to navigate through trial and error and reach the goal with enough training and good learning parameters. In the project, they utilized deep Q-learning which is a combination of Q-learning and neural network. In deep Q-learning, a neural network is used to approximate the Q-value function. A state is usually given as the input and a Q-value of all possible actions is generated as the output.<br/> 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the current project, we focused on a more specific scenario of self-navigation, which is a self-driving car navigating on a fixed track. Furthermore, Q-learning was selected as the learning strategy for the agent for the intention of staying within the scope of the class and building a solid foundation of reinforcement learning taught.<br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the current project, we focused on a more specific scenario of self-navigation, which is a self-driving car navigating on a fixed track. Furthermore, Q-learning was selected as the learning strategy for the agent with the intention of building a solid foundation of reinforcement learning.<br/> 
 ***
 
 ## Implementation and Environment
