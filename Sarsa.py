@@ -2,7 +2,7 @@ import numpy as np
 import random
 
 '''
-    This class represents an agent that uses Q-learning to learn
+    This class represents an agent that uses Sarsa to learn
 '''
 class SarsaAgent():
     def __init__(self, gamma, alpha, epsilon, numOfAction, stateDRange):
